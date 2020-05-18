@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgitem"
+    tools:context=".FormGuruActivity">
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/txt_tittle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="16dp"
+                android:text="FORM TAMBAH DATA SISWA"
+                android:textColor="#FFF"
+                android:fontFamily="@font/boogalo_regular"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/txt_namasiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama: "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginTop="60dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_tittle"/>
+
+            <EditText
+                android:id="@+id/edt_namasiswa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                app:layout_constraintStart_toEndOf="@id/txt_namasiswa"
+                app:layout_constraintTop_toTopOf="@id/txt_namasiswa"
+                app:layout_constraintBottom_toBottomOf="@id/txt_namasiswa"/>
+
+            <TextView
+                android:id="@+id/txt_alamatsiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat: "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_namasiswa"/>
+
+            <EditText
+                android:id="@+id/edt_alamatsiswa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                app:layout_constraintStart_toEndOf="@id/txt_alamatsiswa"
+                app:layout_constraintTop_toTopOf="@id/txt_alamatsiswa"
+                app:layout_constraintBottom_toBottomOf="@id/txt_alamatsiswa"/>
+
+            <TextView
+                android:id="@+id/txt_jksiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kelamin: "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_alamatsiswa"/>
+
+            <RadioGroup
+                android:id="@+id/group_jksiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_jksiswa">
+
+                <RadioButton
+                    android:id="@+id/btn_lakisiswa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Laki-laki"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"/>
+
+                <RadioButton
+                    android:id="@+id/btn_perempuansiswa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perempuan"
+                    android:textColor="#000000"
+                    android:textSize="14sp"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_tgllahirsiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tgl Lahir : "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/group_jksiswa"/>
+
+            <EditText
+                android:id="@+id/edt_tgllahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="85dp"
+                app:layout_constraintStart_toEndOf="@id/txt_tgllahirsiswa"
+                app:layout_constraintTop_toTopOf="@id/txt_tgllahirsiswa"
+                app:layout_constraintBottom_toBottomOf="@id/txt_tgllahirsiswa"/>
+
+            <TextView
+                android:id="@+id/txt_kelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kelas : "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_tgllahir"/>
+
+            <EditText
+                android:id="@+id/edt_kelas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                app:layout_constraintStart_toEndOf="@id/txt_kelas"
+                app:layout_constraintTop_toTopOf="@id/txt_kelas"
+                app:layout_constraintBottom_toBottomOf="@id/txt_kelas"/>
+
+            <Button
+                android:id="@+id/btn_tambah_data_siswa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TAMBAHKAN DATA"
+                android:background="@color/colorNew"
+                android:layout_marginTop="80dp"
+                app:layout_constraintTop_toBottomOf="@id/edt_tgllahir"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

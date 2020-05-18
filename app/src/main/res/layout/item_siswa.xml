@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="#F8E969"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nimsiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIM"
+                android:fontFamily="@font/boogalo_regular"
+                android:textSize="7pt"
+                android:layout_margin="7dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/namasiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAMA"
+                android:fontFamily="@font/boogalo_regular"
+                android:textSize="7pt"
+                android:layout_margin="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nimsiswa" />
+
+            <TextView
+                android:id="@+id/alamatsiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALAMAT"
+                android:fontFamily="@font/boogalo_regular"
+                android:textSize="7pt"
+                android:layout_margin="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/namasiswa" />
+
+            <TextView
+                android:id="@+id/jenis_kelamin_siswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JENIS KELAMIN"
+                android:fontFamily="@font/boogalo_regular"
+                android:textSize="7pt"
+                android:layout_margin="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/alamatsiswa" />
+
+            <TextView
+                android:id="@+id/tanggal_lahirsiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TANGGAL LAHIR"
+                android:fontFamily="@font/boogalo_regular"
+                android:textSize="7pt"
+                android:layout_margin="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/jenis_kelamin_siswa" />
+
+            <TextView
+                android:id="@+id/kelassiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KELAS"
+                android:fontFamily="@font/boogalo_regular"
+                android:textSize="7pt"
+                android:layout_margin="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tanggal_lahirsiswa"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_nim_siswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:fontFamily="@font/boogalo_regular"
+                android:textSize="7pt"
+                android:layout_margin="7dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_nama_siswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:layout_margin="7dp"
+                android:fontFamily="@font/boogalo_regular"
+                android:textSize="7pt"
+                app:layout_constraintTop_toBottomOf="@id/txt_nim_siswa"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_alamat_siswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:fontFamily="@font/boogalo_regular"
+                android:textSize="7pt"
+                android:layout_margin="7dp"
+                app:layout_constraintTop_toBottomOf="@id/txt_nama_siswa"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_jk_siswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:fontFamily="@font/boogalo_regular"
+                android:textSize="7pt"
+                android:layout_margin="7dp"
+                app:layout_constraintTop_toBottomOf="@id/txt_alamat_siswa"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_tgllahir_siswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:fontFamily="@font/boogalo_regular"
+                android:textSize="7pt"
+                android:layout_margin="7dp"
+                app:layout_constraintTop_toBottomOf="@id/txt_jk_siswa"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_kelas_siswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:fontFamily="@font/boogalo_regular"
+                android:textSize="7pt"
+                android:layout_margin="7dp"
+                app:layout_constraintTop_toBottomOf="@id/txt_tgllahir_siswa"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

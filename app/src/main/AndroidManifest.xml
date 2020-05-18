@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.ac.polinema.miniprojectabsensiguruprivate">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".StartGuruActivity"></activity>
+        <activity android:name=".RekapAbsenActivity" />
+        <activity android:name=".SiswaActivity" />
+        <activity android:name=".FormSiswaActivity" />
+        <activity android:name=".StartAdminActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAN8imYXB0Z72kfYt3TTekaO1nd2CDBlKU" />
+
+        <activity android:name=".FormGuruActivity" />
+        <activity android:name=".MapsLocActivity" />
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".GuruActivity" />
+        <activity android:name=".AdminLoginActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

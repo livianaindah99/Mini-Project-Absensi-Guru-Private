@@ -25,6 +25,8 @@ Jika di klik izinkan, maka tampilannya seperti di bawah ini.
 
 ![Memotret](https://user-images.githubusercontent.com/60722568/82331322-29d0f080-9a0e-11ea-8c59-94008ce36f46.jpg)
 
+![Hasil Kamera](https://user-images.githubusercontent.com/60722568/82332026-15d9be80-9a0f-11ea-9751-3c49683d1ba7.jpg)
+
 
 **FORM TAMBAH DATA SISWA**
 Berikut merupakan tampilan form untuk menambahkan data siswa.

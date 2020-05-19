@@ -72,10 +72,9 @@ public class GuruActivity extends AppCompatActivity {
 
                 if (response.isSuccessful()) {
                     List<ItemAbsen> absenItems = response.body();
-
                     for (ItemAbsen item : absenItems) {
                         absen.add(new ItemAbsen(item.getUsername(), item.getPassword(), item.getJam_login(),
-                                item.getJam_logout(), item.getTanggal(), item.getLokasi_latitude(), item.getLokasi_longitude(), item.getNim_siswa(), item.getNama_siswa(), item.getKelas_siswa()));
+                                item.getJam_logout(), item.getTanggal(), item.getLokasi_latitude(), item.getLokasi_longitude(), item.getNim(), item.getNama(), item.getKelas()));
                     }
 
                     absen.add(new ItemAbsen(session.getUsername(), session.getPassword(), session.getLoginTime(),
@@ -115,24 +114,24 @@ public class GuruActivity extends AppCompatActivity {
                 String tanggal = session.getDate();
                 double lokasi_latitude = session.getLocLatitude();
                 double lokasi_longitude = session.getLocLongitude();
-                String nim_siswa = getIntent().getStringExtra("nim");
-                String nama_siswa = getIntent().getStringExtra("nama");
-                String kelas_siswa = getIntent().getStringExtra("kelas");
+                String nim = getIntent().getStringExtra("nim");
+                String nama = getIntent().getStringExtra("nama");
+                String kelas = getIntent().getStringExtra("kelas");
 
                 ApiInterface apiInterface = ApiClient.getClient().create(ApiInterface.class);
 
-                Call<ResponseBody> call = apiInterface.absenGuru(new ItemAbsen(username, password, jam_login, jam_logout, tanggal, lokasi_latitude, lokasi_longitude, nim_siswa, nama_siswa,kelas_siswa));
+                Call<ResponseBody> call = apiInterface.absenGuru(new ItemAbsen(username, password, jam_login, jam_logout, tanggal, lokasi_latitude, lokasi_longitude, nim, nama,kelas));
 
                 call.enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                         if (response.isSuccessful()) {
                             session.logout();
-                            Toast.makeText(getApplicationContext(), "Logout Berhasil", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Logout Berhasil!", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(intent);
                         } else {
-                            Toast.makeText(getApplicationContext(), "Logout Gagal", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Logout Gagal!", Toast.LENGTH_SHORT).show();
                         }
                     }
 

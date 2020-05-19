@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
         result = findViewById(R.id.txt_login_admin);
         loginButton = findViewById(R.id.btn_login_guru);
         loginForm = findViewById(R.id.login_guru);
-
         loginButton = findViewById(R.id.btn_login_guru);
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

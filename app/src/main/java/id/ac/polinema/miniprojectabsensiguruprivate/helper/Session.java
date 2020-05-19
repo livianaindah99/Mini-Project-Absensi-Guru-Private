@@ -93,6 +93,7 @@ public class Session {
     }
 
     public String getNimSiswa() {
+
         return  preferences.getString(NIM_SISWA_PREF, "");
     }
 
@@ -101,6 +102,7 @@ public class Session {
     }
 
     public String getNamaSiswa() {
+
         return  preferences.getString(NAMA_SISWA_PREF, "");
     }
 
@@ -109,7 +111,8 @@ public class Session {
     }
 
     public String getKelasSiswa() {
-        return  preferences.getString(NAMA_SISWA_PREF, "");
+
+        return  preferences.getString(KELAS_SISWA_PREF, "");
     }
 
     public void logout() {

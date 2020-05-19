@@ -105,11 +105,11 @@ public class ItemDataSiswa extends AbstractItem<ItemDataSiswa, ItemDataSiswa.Vie
                     builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent sswintent = new Intent(itemView.getContext(), GuruActivity.class);
-                            sswintent.putExtra("nim", item.nim);
-                            sswintent.putExtra("nama", item.nama);
-                            sswintent.putExtra("kelas", item.kelas);
-                            itemView.getContext().startActivity(sswintent);
+                            Intent intent = new Intent(itemView.getContext(), GuruActivity.class);
+                            intent.putExtra("nim", item.nim);
+                            intent.putExtra("nama", item.nama);
+                            intent.putExtra("kelas", item.kelas);
+                            itemView.getContext().startActivity(intent);
                         }
                     });
                     builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {

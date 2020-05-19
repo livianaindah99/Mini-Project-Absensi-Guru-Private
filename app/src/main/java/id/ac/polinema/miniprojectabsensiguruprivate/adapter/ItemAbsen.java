@@ -24,11 +24,11 @@ public class ItemAbsen extends AbstractItem<ItemAbsen, ItemAbsen.ViewHolder> {
     private String tanggal;
     private double lokasi_latitude;
     private double lokasi_longitude;
-    private String nim_siswa;
-    private String nama_siswa;
-    private String kelas_siswa;
+    private String nim;
+    private String nama;
+    private String kelas;
 
-    public ItemAbsen(String username, String password, String jam_login, String jam_logout, String tanggal, double lokasi_latitude, double lokasi_longitude, String nim_siswa, String nama_siswa, String kelas_siswa) {
+    public ItemAbsen(String username, String password, String jam_login, String jam_logout, String tanggal, double lokasi_latitude, double lokasi_longitude, String nim, String nama, String kelas) {
         this.username = username;
         this.password = password;
         this.jam_login = jam_login;
@@ -36,9 +36,9 @@ public class ItemAbsen extends AbstractItem<ItemAbsen, ItemAbsen.ViewHolder> {
         this.tanggal = tanggal;
         this.lokasi_latitude = lokasi_latitude;
         this.lokasi_longitude = lokasi_longitude;
-        this.nim_siswa = nim_siswa;
-        this.nama_siswa = nama_siswa;
-        this.kelas_siswa = kelas_siswa;
+        this.nim = nim;
+        this.nama = nama;
+        this.kelas = kelas;
     }
 
     public String getUsername() {
@@ -70,16 +70,16 @@ public class ItemAbsen extends AbstractItem<ItemAbsen, ItemAbsen.ViewHolder> {
         return lokasi_longitude;
     }
 
-    public String getNim_siswa() {
-        return nim_siswa;
+    public String getNim() {
+        return nim;
     }
 
-    public String getNama_siswa() {
-        return nama_siswa;
+    public String getNama() {
+        return nama;
     }
 
-    public String getKelas_siswa() {
-        return kelas_siswa;
+    public String getKelas() {
+        return kelas;
     }
 
     @NonNull
@@ -99,7 +99,7 @@ public class ItemAbsen extends AbstractItem<ItemAbsen, ItemAbsen.ViewHolder> {
     }
 
     public class ViewHolder extends FastAdapter.ViewHolder<ItemAbsen> {
-        private TextView jam_login, jam_logout, tanggal, latitude, longitude, nim_siswa, nama_siswa, kelas_siswa;
+        private TextView jam_login, jam_logout, tanggal, latitude, longitude, nim, nama, kelas;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -108,9 +108,9 @@ public class ItemAbsen extends AbstractItem<ItemAbsen, ItemAbsen.ViewHolder> {
             tanggal = itemView.findViewById(R.id.txt_tanggal);
             latitude = itemView.findViewById(R.id.txt_lokasi_latitude);
             longitude = itemView.findViewById(R.id.txt_lokasi_longitude);
-            nim_siswa = itemView.findViewById(R.id.txt_nimssw);
-            nama_siswa = itemView.findViewById(R.id.txt_namassw);
-            kelas_siswa = itemView.findViewById(R.id.txt_kelasssw);
+            nim = itemView.findViewById(R.id.txt_nimssw);
+            nama = itemView.findViewById(R.id.txt_namassw);
+            kelas = itemView.findViewById(R.id.txt_kelasssw);
         }
 
         @Override
@@ -120,9 +120,9 @@ public class ItemAbsen extends AbstractItem<ItemAbsen, ItemAbsen.ViewHolder> {
             tanggal.setText(item.tanggal);
             latitude.setText(String.valueOf(item.lokasi_latitude));
             longitude.setText(String.valueOf(item.lokasi_longitude));
-            nim_siswa.setText(item.nim_siswa);
-            nama_siswa.setText(item.nama_siswa);
-            kelas_siswa.setText(item.kelas_siswa);
+            nim.setText(item.nim);
+            nama.setText(item.nama);
+            kelas.setText(item.kelas);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -143,9 +143,9 @@ public class ItemAbsen extends AbstractItem<ItemAbsen, ItemAbsen.ViewHolder> {
             tanggal.setText(null);
             latitude.setText(null);
             longitude.setText(null);
-            nim_siswa.setText(null);
-            nama_siswa.setText(null);
-            kelas_siswa.setText(null);
+            nim.setText(null);
+            nama.setText(null);
+            kelas.setText(null);
         }
     }
 }

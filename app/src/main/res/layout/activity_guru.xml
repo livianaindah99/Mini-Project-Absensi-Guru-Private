@@ -7,6 +7,22 @@
     android:background="@drawable/backgroundisi"
     tools:context=".GuruActivity">
 
+    <TextView
+        android:id="@+id/jdl_absenguru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="DAFTAR ABSENSI GURU PRIVATE"
+        android:textStyle="bold"
+        android:fontFamily="@font/boogalo_regular"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        app:layout_constraintBottom_toTopOf="@+id/rv_absen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_absen"
         android:layout_width="match_parent"
